@@ -1,3 +1,88 @@
 .comic {
-	display: grid;
-}
+  margin: 2em 0em;
+  padding: 1em 0em;
+  border-bottom: 1px dashed green; }
+  .comic div {
+    background: lightblue;
+    text-align: center;
+    padding: 1em;
+    border-radius: 0.5em; }
+
+.column-style .comic {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1em; }
+
+.column-style .title {
+  grid-column: 1/5; }
+
+.column-style .pow {
+  grid-column: 2/4; }
+
+.column-style .pow2 {
+  grid-column: 3/5; }
+
+.column-style .bam {
+  grid-column: 4/5; }
+
+.column-style .bam2 {
+  grid-column: 2/3; }
+
+.column-style .bang {
+  grid-column: 2/5; }
+
+.column-style .sidePanel {
+  grid-column: 1/2;
+  grid-row: 2/5; }
+
+.template-style .comic {
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "title title title title " "sidePanel pow pow bam" "sidePanel bang bang bang" "sidePanel bam2 pow2 pow2" "sidePanel . bam3 pow3"; }
+
+.template-style .title {
+  grid-area: title; }
+
+.template-style .pow {
+  grid-area: pow; }
+
+.template-style .pow2 {
+  grid-area: pow2; }
+
+.template-style .pow3 {
+  grid-area: pow3; }
+
+.template-style .bam {
+  grid-area: bam; }
+
+.template-style .bam2 {
+  grid-area: bam2; }
+
+.template-style .bam3 {
+  grid-area: bam3; }
+
+.template-style .bang {
+  grid-area: bang; }
+
+.template-style .sidePanel {
+  grid-area: sidePanel; }
+
+.with-spans .comic {
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: repeat(4, 1fr); }
+
+.with-spans .title {
+  grid-column-end: span 4; }
+
+.with-spans .pow {
+  grid-column-end: span 2; }
+
+.with-spans .bang {
+  grid-column-end: span 3; }
+
+.with-spans .sidePanel {
+  grid-column: 1/2;
+  grid-row-start: 2;
+  grid-row-end: span 3; }
